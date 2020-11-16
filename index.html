@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PACKED WEEKEND</title>
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+  <!-- bootstrap core CSS -->
+  <link rel="stylesheet" href="https://87am.agency/amazon/packed-weekend/css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://87am.agency/amazon/packed-weekend/js/bootstrap.min.js"></script>
+
+  <!-- Google Maps API V3 -->
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&language=en&key=AIzaSyCm9tnxiRfBEQ4R1tK5l23ORcY2JTM2g3g"></script>
+    
+  <!-- Map plugin -->
+  <link rel="stylesheet" href="https://87am.agency/amazon/packed-weekend/jquery-activmap/css/skin-compact/activmap-compact.css">
+  <link rel="stylesheet" href="https://87am.agency/amazon/packed-weekend/jquery-activmap/css/skin-compact/activmap-light-blue.css">
+  <script src="https://87am.agency/amazon/packed-weekend/jquery-activmap/js/jquery-activmap.js"></script>
+  <script src="https://87am.agency/amazon/packed-weekend/jquery-activmap/js/markercluster.min.js"></script>
+    
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,400;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+  <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" integrity="sha384-S+e0w/GqyDFzOU88KBBRbedIB4IMF55OzWmROqS6nlDcXlEaV8PcFi4DHZYfDk4Y" crossorigin="anonymous"></script>
+
+  <!-- style sheets -->
+  <link rel="stylesheet" type="text/css" href="https://87am.agency/amazon/packed-weekend/css/rotating.css">
+  <link rel="stylesheet" type="text/css" href="https://87am.agency/amazon/packed-weekend/css/style.css">
+
+  <script src="https://87am.agency/amazon/packed-weekend/locations2.js"></script>
+
+  <style>
+    /* Stops override of Rodeo editor textbox */ 
+    .collapse:not(.show) {
+      display: block;
+    }
+  </style>
+
+  <script>
+        $(function(){
+            $('#activmap-wrapper').activmap({
+                places : locationsObject,
+                styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}],
+                icon: 'https://87am.agency/amazon/packed-weekend/jquery-activmap/img/marker.png',
+                center_icon: 'https://87am.agency/amazon/packed-weekend/images/icons/marker-center.png',
+                lat: 39.895755,        //latitude of the center
+                lng: -101.614068,     //longitude of the center
+                zoom: 5,
+                posPanel: 'left',
+                showPanel: true,
+                radius: 30,
+                cluster: true,
+                mapType: 'roadmap',
+                request: 'large',
+                allowMultiSelect: true,
+                show_center: false,
+                autogeolocate: true,
+                show_center: true,
+                locationTypes: ['geocode','establishment']
+            }); 
+        });
+  </script>
+
+</head>
+
+<div class="body bg-gradient packed">
+
+
+
+<div class="container text-center text-white">
+
+<nav class="navbar shadow navbar-expand-lg navbar-dark bg-light fixed-top">
+    <div class="container" style="max-width: none;">
+      <a class="navbar-brand" onClick='logEvent("click","ExternalLink", "WatchNow");' href="https://www.amazon.com/dp/B08KL51WMT" target="_blank"><img class="mobile-logo" src="https://87am.agency/amazon/packed-weekend/images/pack-logo.png" style="max-height: 50px;"></a>
+      <a onClick='logEvent("click","ExternalLink", "WatchNow");' href="https://www.amazon.com/dp/B08KL51WMT" target="_blank" class="btn nav-btn">Watch Season 1</a>
+    </div>
+</nav>
+
+
+
+<header class="masthead-2 mb-3">
+  <div class="h-100 pt-5">
+    <div class="row align-items-center py-3">
+      <div class="col-md-10 mt-5 offset-md-1 text-center">
+        <img style="width: 100%;max-width:800px;height:auto;margin-bottom: 15px;" src="https://87am.agency/amazon/packed-weekend/packed-header.png">
+        <p style="font-size:1.3em;font-weight: bold;" class="lead">In honor of the launch of the new series The Pack, Prime Video has created the ultimate celebration for dogs everywhere – and their humans too.</p>
+      </div>
+
+       <div class="col-12 p-0 mt-3 mb-3"> 
+          <div class="row w-100">
+                  <div class="col-md-3 col-6 hvr-bounce-in">
+                      <a onClick='logEvent("click","CTAButton", "TAIL-WAGGIN TREATS");' href="#perks" class="pack-cta bg-blue d-block p-3 js-scroll-trigger" style="background-image: url(https://87am.agency/amazon/packed-weekend/images/packedperks-bg.png);">
+                        <h4>TAIL-WAGGIN' TREATS</h4>
+                        <p>Exclusive treats for the whole family!</p>
+                      </a>
+                  </div>
+                  <div class="col-md-3 col-6 hvr-bounce-in">
+                      <a onClick='logEvent("click","CTAButton", "PACK WALK CHALLENGE");' href="#walk" class="pack-cta bg-blue d-block p-3 js-scroll-trigger" style="background-image: url(https://87am.agency/amazon/packed-weekend/images/packwalkchallenge-bg.png);">
+                        <h4>PACK WALK CHALLENGE</h4>
+                        <p>Join our Pack Walk!</p>
+                      </a>
+                  </div>
+                  <div class="col-md-3 col-6 hvr-bounce-in">
+                      <a onClick='logEvent("click","CTAButton", "CHARITABLE ORGANIZATIONS");' href="#charity" class="pack-cta bg-blue d-block p-3 js-scroll-trigger" style="background-image: url(https://87am.agency/amazon/packed-weekend/images/charitablepartners-bg.png);">
+                        <h4>CHARITABLE ORGANIZATIONS</h4>
+                        <p>Our Pack is giving back!</p>
+                      </a>                      
+                  </div>
+                  <div class="col-md-3 col-6 hvr-bounce-in">
+                      <a onClick='logEvent("click","CTAButton", "#PACKEDWEEKEND");' href="#social" class="pack-cta bg-blue d-block p-3 js-scroll-trigger" style="background-image: url(https://87am.agency/amazon/packed-weekend/images/packedweekend-bg.png);">
+                        <h4>PACKED WEEKEND</h4>
+                        <p>Check out what's happening on social!</p>
+                      </a>                       
+                  </div>
+               </div>
+          </div>       
+
+      </div>
+
+  </div>
+</header>
+
+
+
+
+<!-- START TRAILER SECTION -->
+<section class="row mb-5" id="trailer">
+
+<div class="col-md-8 shadow">
+    <video onClick='logEvent("click","Media", "VideoPlayPause");' class="trailer" src="https://87am.agency/amazon/packed-weekend/trailer.mp4" autoplay loop playsinline muted></video>
+    <header class="viewport-header trailer">
+      <p></p>
+    </header>
+</div>
+
+<div class="col-md-4" style="padding-right: 0px;">
+<div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel" data-interval="2000">
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item main-dogs active" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/Kentuckey_Derby.jpg');">
+        <div class="carousel-caption d-md-block">
+          <h4>Kentucky & Derby</h4>
+        </div>
+      </div>      
+      <div class="carousel-item main-dogs" style="background-image:url('https://87am.agency/amazon/packed-weekend/images/dogs/Brian_Dixie.jpg');">
+        <div class="carousel-caption d-md-block">
+          <h4>Brian & Dixie</h4>
+        </div>
+      </div>
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/Lucy_Duchess.jpg');">
+        <div class="carousel-caption d-md-block">
+          <h4>Lucy & Duchess</h4>
+        </div>
+      </div>
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/Chisum_Kepo.jpg');">
+        <div class="carousel-caption d-md-block">
+          <h4>Chisum & Kepo</h4>
+        </div>
+      </div>
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/Chelsea_Gryffin.jpg');">
+        <div class="carousel-caption d-md-block">
+          <h4>Chelsey & Gryffin</h4>
+        </div>
+      </div>
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/Donna_Charlie.jpg');">
+        <div class="carousel-caption d-md-block">
+          <h4>Donna & Charlie</h4>
+        </div>
+      </div> 
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/Daniel_Allister.jpg');">
+        <div class="carousel-caption d-md-block">
+          <h4>Daniel & Allister</h4>
+        </div>
+      </div> 
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/Josh_Snow.jpg');">
+        <div class="carousel-caption d-md-block">
+          <h4>Josh & Snow</h4>
+        </div>
+      </div> 
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/Lynh_Chance.jpg');">
+        <div class="carousel-caption d-md-block">
+          <h4>Linh & Chance</h4>
+        </div>
+      </div> 
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/Mark_Ace.jpg');">
+        <div class="carousel-caption d-md-block">
+          <h4>Mark & Ace</h4>
+        </div>
+      </div>
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/Mitra_Bozley.jpg');">
+        <div class="carousel-caption d-md-block">
+          <h4>Mitra & Bozley</h4>
+        </div>
+      </div>
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/Vania_Jax.jpg');">
+        <div class="carousel-caption d-md-block">
+          <h4>Vania & Jax</h4>
+        </div>
+      </div>
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/RedWoofImage.jpg');">
+        <a onClick='logEvent("click","ExternalLink", "Partners - RedRoof");' href="https://www.redroof.com/" target="_blank">
+        <div class="d-md-block h-100 part-slide" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/RedWoofText.png');">
+        </div>
+        </a>
+      </div>
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/SleepyPodImage.jpg');">
+        <a onClick='logEvent("click","ExternalLink", "Partners - Sleepypod");' href="https://sleepypod.com" target="_blank">
+          <div class="d-md-block h-100 part-slide" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/SleepyPodText.png');"></div>
+        </a>
+      </div>
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/Rocco@RoxieImage.jpg');">
+        <a onClick='logEvent("click","ExternalLink", "Partners - Rocco");' href="https://roccoandroxie.com/" target="_blank">
+        <div class="d-md-block h-100 part-slide" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/Rocco&RoxieText.png');">
+        </div>
+        </a>
+      </div>
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/BringFidoImage.jpg');">
+        <a onClick='logEvent("click","ExternalLink", "Partners - BringFido");' href="http://www.bringfido.com/track?aid=thepack" target="_blank">
+        <div class="d-md-block h-100 part-slide" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/BringFidoText.png');">
+        </div>
+        </a>
+      </div>
+      <div class="carousel-item main-dogs" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/CampBowWowImage.jpg');">
+        <a onClick='logEvent("click","ExternalLink", "Partners - CampBow");' href="https://www.campbowwow.com/the-pack" target="_blank">
+        <div class="d-md-block h-100 part-slide" style="background-image: url('https://87am.agency/amazon/packed-weekend/images/dogs/CampBowWowText.png');">
+        </div>
+        </a>
+      </div>                                                         
+    </div>
+    <a onClick='logEvent("click","Media", "CarouselPrev");' class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+    </a>
+    <a onClick='logEvent("click","Media", "CarouselNext");' class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+    </a>
+</div>
+</div>
+
+</section>
+<!-- END TRAILER SECTION -->
+
+
+
+
+<!-- START PACK WALK -->
+<section class="text-center mb-5 mt-5" id="walk">
+
+    <div class="text-center pt-3" >
+      <h2 class="mb-3">PACK WALK CHALLENGE<img src="https://87am.agency/amazon/packed-weekend/images/title-border-blue.png"></h2>
+      <p>Don’t sit! Don’t stay! Join our pack and strut your stuff during the Pack Walk Challenge, brought to you by Under Armour Connected Fitness. It’s a global, virtual dog walk benefiting some incredible causes and, the best part is, you can participate from wherever you are located. Plus, eligible participants have the chance to win amazing prizes when they complete the Challenge!</p>
+   </div> 
+    <div class="row mb-5" style="margin: 0 auto;">
+      <div class="container">
+        <img class="shadow img-fluid" src="https://87am.agency/amazon/packed-weekend/mapmyrun-placeholder.jpg">
+       </div> 
+      <!--
+      <iframe onClick='logEvent("click","iFrameEmbed", "MapMyFitnessChallenge");' class="mapmyrun" src="##" width="100%" height="900" scrolling="no" frameBorder="0"></iframe>
+      -->
+    </div>
+
+</section>    
+  <!-- END PACK WALK -->
+
+
+
+<!-- START PARTNER PERKS -->
+<section class="pt-5 mt-5">
+
+  <div class="text-center text-white mb-3" id="perks">
+    <h2 class="mb-3">TAIL-WAGGIN' TREATS<img src="https://87am.agency/amazon/packed-weekend/images/title-border-yellow.png"></h2>
+    <p>Enjoy special deals, perks and promotions from dog-friendly brands - no tricks or begging required!</p>
+    <em class="mobile-note">Tap to reveal the promotion</em>
+  </div>
+
+
+<div class="row d-bl mb-3">
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Alaska.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center">
+        <p>Join the Pack Walk Challenge for a chance to win travel on Alaska Airlines!</p>
+        <h4><a onClick='logEvent("click","ExternalLink", "Partners - Alaska Airlines");' class="text-yellow" href="https://www.alaskaair.com/" target="_blank">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/BringFido.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+        <p>BringFido has the scoop on 250k+ places to stay, play, and eat with your dog worldwide. Share your favorite pet-friendly spot with them over Packed Weekend and you could win a $300 Amazon gift card!</p>
+        <h4><a onClick='logEvent("click","ExternalLink", "Partners - BringFido");' class="text-yellow" href="http://www.bringfido.com/track?aid=thepack">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/CampBow.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Adventure is just around the corner at Camp Bow Wow! Dog Day Care & Boarding is sure to get your pup’s tail wagging. Learn how you can win a FREE YEAR of Camp services at one of our 180+ locations!</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - CampBow");' class="text-yellow" href="https://www.campbowwow.com/the-pack">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Cesar.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>The CESAR brand has long celebrated the special relationship between pet parents and their dogs and is thrilled to team up with The Pack in celebration of that heartwarming bond. </p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - Cesar");' class="text-yellow" href="https://www.amazon.com/stores/Cesar/page/4CF885F4-93E0-410F-8C61-56B32BF09631?ref_=ast_bln">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Cheerios.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Cheerios are made with the heart healthy whole grain oats you know and love. While many factors affect heart disease, diets low in saturated fat and cholesterol may reduce the risk of this disease.</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - Cheerios");' class="text-yellow" href="https://attach.mikmak.tv/8a2ebe85/8828fd30-f430-27f9-b55e-12cf84873bb3?channelType=social&trafficType=paid&attachCampaignName=cheeriosoctober2020&handle=cheerios&platformType=facebook&adPlacementType=placement-optimized&adUnitType=na&paidAudienceType=happy-heart-managers&adUnitCreative=heart-health-amazon-packed-ybc-partnership&attachCreativeName=yellow-box-cheerios-new-partnership-creative&skuOrDescription=yellow-box-cheerios&campaignObjectiveType=awareness">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Chopra.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Dogs are our best friends, but they’re also powerful teachers. At Chopra Global, we believe living life in the present, giving to others, & enjoying time with our pets contributes to a healthier well-being.</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - Chopra");' class="text-yellow" href="https://chopra.com/tags/pets">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Homes.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Homes.com is the simply smarter home search resource, for humans and dogs alike! Visit Homes.com for fun, custom dog house listings, a dog’s-eye view of the homebuying journey, and much more. “Homes” is where the bark is!</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - Homes");' class="text-yellow" href="https://www.homes.com">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/MaxBone.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Shop maxbone.com using promo code PACK15 over PACKED Weekend for 15% off!</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - MaxBone");' class="text-yellow" href="https://www.maxbone.com/">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Minted.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Check out Minted’s 15% off sale on all pet products in celebration of The Pack, only during Packed Weekend! Start dreaming of paw-fect holiday cards, custom pet portrait art, personalized dog beds, and great stocking stuffers.</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - Minted");' class="text-yellow" href="https://www.minted.com/gifts">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/PrettyFrank.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>In honor of The Pack, Pretty Frank -- a natural deodorant and personal care company -- will donate $500 to the Environmental Defense Fund (because it's your dog's world, too!)</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - PrettyFrank");' class="text-yellow" href="https://www.amazon.com/stores/page/D758ABB4-A3E3-4CAF-99B4-5672B3F1F367?channel=The%20Pack">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/RedRoof.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Use VP code 605422 for 15% off your stay with Red Roof, where pets always stay free! At select locations during Packed Weekend, Red Roof will provide exclusive gifts to guests with pets in tow.</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - RedRoof");' class="text-yellow" href="https://www.redroof.com/">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="col-lg-3 col-6">
+    <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Rex.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Join Rex Specs on instagram @rexspecsk9 for your chance to win a pair of Rex Specs, as seen in The Pack!</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - Rex");' class="text-yellow" href="https://www.rexspecs.com/?utm_source=AMAZON&utm_medium=REFERRAL&utm_campaign=THEPACK_landingpage">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Rocco.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Rocco & Roxie will host a giveaway on social media over Packed Weekend.  Five lucky winners will receive a gift pack of pet stain & odor cleaning products from Rocco & Roxie!</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - Rocco");' class="text-yellow" href="https://roccoandroxie.com/">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>  
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Rover.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Visit The Dog People, powered by Rover.com, for tips and tricks for pet parenthood, including special insight from The Pack dog safety expert and The Dog People board member, Nicole Ellis.</p>
+<h4><a  onClick='logEvent("click","ExternalLink", "Partners - Rover");' class="text-yellow" href="https://www.rover.com/blog/">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Saks.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Saks Fifth Avenue and "The Pack" celebrate our furry friends with a luxe doggy boutique to shop this holiday season.</p>
+<h4><a  onClick='logEvent("click","ExternalLink", "Partners - Saks");' class="text-yellow" href="https://saks.com/thepack">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Seecas.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Seecaas are beautiful and comfy enough for a walk around the block with Fido! Seecaas will donate to Best Friends Animal Society over Packed Weekend to help save homeless pets in America’s shelters.</p>
+<h4><a  onClick='logEvent("click","ExternalLink", "Partners - Seecas");' class="text-yellow" href="https://seecaas.com/">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="col-lg-3 col-6">
+    <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Sleepypod.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Sleepypod is giving away prizes November 20-22nd on their website in celebration of Packed Weekend!  Learn more about how Sleepypod products help keep your pet safer at Sleepypod.com.</p>
+<h4><a  onClick='logEvent("click","ExternalLink", "Partners - Sleepypod");' class="text-yellow" href="https://sleepypod.com/">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/TheBearandRat.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>In celebration of The Pack, use promo code THEPACK for 10% off your order of frozen yogurt dog treats via cooltreatsfordogs.com during Packed Weekend.</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - TheBearandRat");' class="text-yellow" href="https://www.cooltreatsfordogs.com/">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Tractive.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Tractive, the world market leader in GPS Tracking for Cats & Dogs, is all about giving pet parents peace of mind and keeping dogs safe and healthy. In collaboration with The Pack, we’ve made product donations to shelters around the world.</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - Tractive");'  class="text-yellow" href="https://tractive.com/">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/MapMyRun.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+        <p>Join the Pack Walk Challenge, taking place November 20-December 19, for a chance to win incredible prizes for you and your four-legged best friend! Download MyFitnessPal or MapMyFitness in the app store to get started today.</p>
+        <h4><a  onClick='logEvent("click","ExternalLink", "Partners - MapMyRun");' class="text-yellow" href="https://www.mapmyfitness.com/">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="col-lg-3 col-6">
+    <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Wisdom.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+        <p>Wisdom Panel dog DNA tests uncover genetic health and breed insights so you can provide your pup with tailored care. And you could win one during Packed Weekend! Follow @wisdompanel on Instagram for details.</p>
+        <h4><a  onClick='logEvent("click","ExternalLink", "Partners - WisdomPanel");' class="text-yellow" href="https://www.wisdompanel.com/en-us/the-pack">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box ">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Amazon4star_Books.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Select Amazon Books & Amazon 4-star locations will offer complimentary gift wrapping for over Packed Weekend, and all stores will offer dog bandana giveaways! </p>
+<h4><a  onClick='logEvent("click","ExternalLink", "Partners - AmazonBooks");' class="text-yellow" href="https://amazon.com/stores/events">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="col-lg-3 col-6">
+    <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/AmazonMusic.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Listen to two playlists curated exclusively for The Pack from Amazon Music, including a calming playlist for your pup and a playlist selected by host Lindsey Vonn to get pumped for the Pack Walk!</p>
+<h4><a  onClick='logEvent("click","ExternalLink", "Partners - AmazonMusic");' class="text-yellow" href="https://music.amazon.com/playlists/B08MJDPRYW">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/AmazonPets.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Shop the curated “Pack Gifts” featuring top products for pets this holiday season in Amazon Pets’ Holiday Gift Guide.</p>
+<h4><a  onClick='logEvent("click","ExternalLink", "Partners - AmazonPets");' class="text-yellow" href="https://www.amazon.com/gcx/Pets/gfhz/events?&categoryId=HHG20-Pets&subcategoryIds=HHG20-Pets%3APack-Gifts&scrollState=eyJpdGVtSW5kZXgiOjEsInNjcm9sbE9mZnNldCI6LTYxNi4wMTY2NjI1OTc2NTYyfQ%3D%3D&sectionManagerState=eyJzZWN0aW9uVHlwZUVuZEluZGV4Ijp7ImFtYWJvdCI6MH19">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/AmazonHub.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Stop by an Amazon Hub Locker+ location to snag a free dog bandana, while supplies last. Fido has never looked so fabulous!</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - AmazonHub");' class="text-yellow" href="https://www.amazon.com/b?ie=UTF8&node=17337379011">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front shadow" style="background-image: url(https://87am.agency/amazon/packed-weekend/partners/Zappos.jpg);">
+      </div>
+      <div class="flip-box-back p-3 text-center ">
+<p>Zappos will help consumers get prepped for the Pack Walk Challenge with top picks for dogs and human companions!</p>
+<h4><a onClick='logEvent("click","ExternalLink", "Partners - Zappos");' class="text-yellow" href="https://www.zappos.com/c/thepack">Learn More</a></h4>
+      </div>
+    </div>
+  </div>
+  </div>  
+
+
+</div>
+   
+
+<!-- PARTNER MAP -->
+            <div id="activmap-wrapper" class="mt-5 shadow">
+            <!-- Places panel (auto removable) -->
+            <div id="activmap-places">
+                <!-- Toolbar -->
+                <div id="activmap-ui-wrapper">
+                    <div id="activmap-search">
+                        <h3 class="text-left mt-3 mb-3 text-white sentence">LOCAL TREATS IN
+                            <div class="slidingVertical">
+                              <span>LOS ANGELES</span>
+                              <span>DALLAS</span>
+                              <span>NEW YORK</span>
+                              <span>CHICAGO</span>
+                              <span>SEATTLE</span>                            
+                            </div>
+                        </h3>
+                        <input class="location-search" id="activmap-location" type="text" name="location" value="" placeholder="Search Location">
+                        
+                        
+                        <a class="btn btn-success text-white" id="activmap-geolocate"><i class="fa fa-crosshairs"></i>Geolocate</a>
+                        <div class="text-white">
+                            <span style="font-size: 16px;">Distance:</span>
+                            <small>
+                                <input type="radio" name="activmap_radius" value="30"> 10mi
+                                <input type="radio" name="activmap_radius" value="75"> 50mi
+                                <input type="radio" name="activmap_radius" value="130"> 100mi
+                                <input type="radio" name="activmap_radius" value="0"> All locations
+                            </small>
+                        
+                        </div>
+                    </div>
+                
+                    <!-- Map categories and tags -->
+                    <div id="activmap-filters">
+                        <div class="marker-selector">
+                            <input type="checkbox" name="marker_type[]" value="tag_shelter" id="tag_shelter" checked>
+                            <label for="tag_shelter"><i class="fa fa-hotel"></i>Shelters</label>
+                        </div>
+                        <div class="marker-selector">
+                            <input type="checkbox" name="marker_type[]" value="tag_health" id="tag_health" checked>
+                            <label for="tag_health"><i class="fa fa-heartbeat"></i>Vets</label>
+                        </div>
+                        <div class="marker-selector">
+                            <input type="checkbox" name="marker_type[]" value="tag_hotel" id="tag_hotel" checked>
+                            <label for="tag_hotel"><i class="fa fa-h-square"></i>Hotels</label>
+                        </div>
+                        <div class="marker-selector">
+                            <input type="checkbox" name="marker_type[]" value="tag_shop" id="tag_shop" checked>
+                            <label for="tag_shop"><i class="fa fa-shopping-bag"></i>Shops</label>
+                        </div>                        
+                        <div class="marker-selector">
+                            <input type="checkbox" name="marker_type[]" value="tag_pet" id="tag_pet" checked>
+                            <label for="tag_pet"><i class="fa fa-cut"></i>Groomers</label>
+                        </div>
+                        <div class="marker-selector">
+                            <input type="checkbox" name="marker_type[]" value="tag_food" id="tag_food" checked>
+                            <label for="tag_food"><i class="fa fa-utensils"></i>Restaurants</label>
+                        </div>
+                        <!--
+                        <div class="marker-selector">
+                            <input type="checkbox" name="marker_type[]" value="tag_books" id="tag_books">
+                            <label for="tag_books"><i class="fa fa-book"></i>Bookstores</label>
+                        </div>
+                        -->
+                    </div>
+                </div>              
+                <div id="activmap-results-num"></div>
+            </div>
+            
+            <!-- MAP CONTAINER -->
+            <div id="activmap-container">
+                <div id="activmap-canvas"></div>
+            </div>
+            <!-- MAP CONTAINER -->
+        </div>
+      
+
+</section>
+<!-- END PARTNER PERKS -->  
+ 
+
+
+<!-- START CHARITY -->
+<section class="mt-5 py-3" id="charity"> 
+
+  <div class="row py-3">
+    <div class="col-12">
+        <div class="text-white d-md-flex align-items-center h-100 py-3 text-center justify-content-center">
+              <div class="text-center pt-3">
+                <h2>CHARITABLE ORGANIZATIONS<img src="https://87am.agency/amazon/packed-weekend/images/title-border-yellow.png"></h2>
+                <p>When you sign up and complete the Pack Walk Challenge, you and your pup have the chance to win amazing prizes. You’ll also be able to donate to three incredible charitable organizations. On November 21, Amazon will match all consumer donations made through the Pack Walk Challenge up to $100k total, meaning each charity could potentially receive a donation of over $33k from Amazon! Learn more about these organizations at the links below.</p>
+              </div> 
+        </div>
+    </div>
+  </div>
+
+<div class="row text-left" style="margin: 0 auto;">
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://87am.agency/amazon/packed-weekend/images/edf.jpg" alt="">
+          <div class="card-body bg-darkblue text-white">
+            <h3>ENVIRONMENTAL DEFENSE FUND</h3>
+            <p class="card-text">Creating a healthy planet for people and pets.</p>
+          </div>
+          <div class="card-footer bg-darkblue ">
+            <h4><a onClick='logEvent("click","ExternalLink", "Charity - EDF");' href="https://www.edf.org/" target="_blank" class="text-yellow">LEARN MORE</a></h4>            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://87am.agency/amazon/packed-weekend/images/aha.jpg" alt="">
+          <div class="card-body bg-darkblue text-white">
+            <h3>AMERICAN HEART ASSOCIATION</h3>
+            <p class="card-text">Healthy Living With a Pet May Mean a Longer Life.</p>
+          </div>
+          <div class="card-footer bg-darkblue ">
+            <h4><a onClick='logEvent("click","ExternalLink", "Charity - AmericanHeart");' href="https://www.heart.org/en/healthy-living/healthy-bond-for-life-pets" target="_blank" class="text-yellow">LEARN MORE</a></h4>            
+          </div>          
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://87am.agency/amazon/packed-weekend/images/bestfriend.jpg" alt="">
+          <div class="card-body bg-darkblue text-white">
+            <h3>BEST FRIENDS ANIMAL SOCIETY</h3>
+            <p class="card-text">Together we can Save Them All.</p>
+          </div>
+          <div class="card-footer bg-darkblue ">
+            <h4><a onClick='logEvent("click","ExternalLink", "Charity - BestFriendsSociety");' href="https://bestfriends.org/thepack" target="_blank" class="text-yellow">LEARN MORE</a></h4>            
+          </div>          
+        </div>
+      </div>
+      
+</div>      
+
+</section>
+<!-- END CHARITY -->
+
+
+<!-- START ATHLETES-->
+  <section class="py-5 mt-5 text-white" id="athletes">
+    <div class="text-center">
+    <h2 class="mb-3">LIFESTYLES OF THE FURRY & FAMOUS<img src="https://87am.agency/amazon/packed-weekend/images/title-border-yellow.png"></h2>
+    <p>Ever wondered what a day in the life of a VIP (Very Important Pup) would be like? Check out these videos for an inside look at the lives and homes of NFL players' beloved dogs.</p>
+   </div> 
+    <div class="row text-left" style="margin: 0 auto;">
+
+          <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
+            <div class=" h-100">
+              <video onClick='logEvent("click","Athletes", "VideoPlay");'  width="100%" controls>
+                <source src="https://87am.agency/amazon/packed-weekend/athlete1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
+            <div class=" h-100">
+              <video onClick='logEvent("click","Athletes", "VideoPlay");'  width="100%" controls>
+                <source src="https://87am.agency/amazon/packed-weekend/athlete2.mp4#t=01" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
+            <div class=" h-100">
+              <video onClick='logEvent("click","Athletes", "VideoPlay");'  width="100%" controls>
+                <source src="https://87am.agency/amazon/packed-weekend/athlete3.mp4#t=01" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
+            <div class=" h-100">
+              <video onClick='logEvent("click","Athletes", "VideoPlay");'  width="100%" controls>
+                <source src="https://87am.agency/amazon/packed-weekend/athlete4.mp4#t=01" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
+            <div class=" h-100">
+              <video onClick='logEvent("click","Athletes", "VideoPlay");'  width="100%" controls>
+                <source src="https://87am.agency/amazon/packed-weekend/athlete5.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
+            <div class=" h-100">
+              <video onClick='logEvent("click","Athletes", "VideoPlay");'  width="100%" controls>
+                <source src="https://87am.agency/amazon/packed-weekend/athlete6.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>          
+
+    </div>      
+  </section>
+<!-- END ATHLETES -->
+
+
+<!-- START FEED -->
+  <section class="py-5 mt-5 text-white" id="social">
+    <div class="text-center">
+    <h2 class="mb-3">FOLLOW OUR FEED<img src="https://87am.agency/amazon/packed-weekend/images/title-border-yellow.png"></h2>
+    <p>Share your favorite photos with your four-legged best friends using <strong>#PackedWeekend</strong> on Instagram and Twitter for a chance to be featured on our feed!</p>
+   </div> 
+    <div class="row">
+      <script async src="https://walls.io/js/wallsio-widget-1.2.js" data-wallurl="https://walls.io/pack-social?nobackground=1&amp;show_header=0&amp;initial_posts=4" data-title="The Pack - Social Feed" data-width="100%" data-autoheight="1" data-injectloadmorebutton="1" data-loadmoretext="LOAD MORE" data-loadmorecount="4" data-height="600" data-lazyload="1"></script>
+    </div>
+  </section>
+<!-- END FEED -->
+
+
+
+
+<!-- START FOOTER -->
+  <section class="py-5 mt-5">
+  <div class="row text-center mt-5 d-block">
+
+      <a onClick='logEvent("click","ExternalLink", "WatchNow");' href="https://www.amazon.com/dp/B08KL51WMT" target="_blank">
+        <img class="mb-5" style="width:98%;" src="https://87am.agency/amazon/packed-weekend/images/watchnow.jpg">
+      </a>
+      <a onClick='logEvent("click","ExternalLink", "GetTheApp");' class="mb-3 hvr-grow" href="https://www.amazon.com/gp/video/splash/getTheApp" target="_blank">
+        <img style="max-width: 550px;" class="mb-3 w-100" src="https://87am.agency/amazon/packed-weekend/images/download-app.png">
+      </a>
+      <a onClick='logEvent("click","ExternalLink", "AmazonPrimeLink");' class="foot-link" href="https://www.amazon.com/amazonprime">
+        <p style="color: white;">Start your 30 day free trial. Restrictions apply. See <strong>amazon.com/amazonprime</strong> for details.</p>
+      </a>
+      <hr style="border-top: 1px solid rgb(255 255 255);">
+      <div id="langlinks"></div>
+  </div>
+  </section>
+<!-- END FOOTER -->
+
+
+
+
+
+   <!-- Scripts -->
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>  
+
+    <script type="text/javascript" src="https://87am.agency/amazon/packed-weekend/js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="https://87am.agency/amazon/packed-weekend/js/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="https://87am.agency/amazon/packed-weekend/js/jquery-easing/scrolling-nav.js"></script>
+    
+
+    <script>
+    $(document).ready(function(){
+      // Activate Carousel
+      $("#carouselExampleIndicators").carousel();
+        
+      // Enable Carousel Controls
+      $(".carousel-control-prev").click(function(){
+        $("#carouselExampleIndicators").carousel("prev");
+      });
+      $(".carousel-control-next").click(function(){
+        $("#carouselExampleIndicators").carousel("next");
+      });
+    });
+    </script>
+
+
+    <!-- amazon click logger -->
+    <script type="text/javascript">
+    function logEvent(event, type, id) { if (window.DA_adlp && window.DA_adlp.logEvent)
+    { const e = {}; e.eventName = event; e.componentType = type; e.componentId = id; window.DA_adlp.logEvent(e); } };
+    </script>
+
+    <script src="https://87am.agency/amazon/packed-weekend/js/page-translations.js"></script>
+    <script src="https://87am.agency/amazon/packed-weekend/js/lingumania.min.js"></script>
+
+
+
+</div>
+</div>
+
+</html>

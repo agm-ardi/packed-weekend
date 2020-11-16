@@ -1,0 +1,143 @@
+#activmap-wrapper {
+    color: #333;
+    background: #fff;
+}
+#activmap-search,
+#activmap-filters {
+    background: #0097e1;
+}
+#activmap-location {
+    color: #555;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+a.activmap-action {
+    color: #fff;
+}
+a.activmap-action#activmap-geolocate {
+    background: #28c7d6;
+    border-color: #28c7d6;
+}
+a.activmap-action#activmap-geolocate:hover {
+    color: #28c7d6;
+}
+a.activmap-action#activmap-reset {
+    background: #555;
+    border-color: #555;
+}
+a.activmap-action#activmap-reset:hover {
+    color: #555;
+}
+a.activmap-action#activmap-target {
+    background: #008CFF;
+    border-color: #008CFF;
+}
+a.activmap-action#activmap-target:hover {
+    color: #008CFF;
+}
+a.activmap-action:hover {
+    background: #fff!important;
+}
+.marker-selector label {
+    color: rgb(255, 234, 70, 0.5);
+}
+.marker-selector label:hover,
+.marker-selector.active label {
+    color: #ffea46;
+}
+#activmap-places {
+        background: rgb(0, 151, 225, 0.8);
+}
+#activmap-results-num {
+    color: #ffea46;
+    background: #204aea;
+    font-family: Fugaz One !important;
+    font-size: 24px;
+}
+.activmap-place:hover,
+.activmap-place.active {
+    background: #2b81ac;
+    color: #fff;
+}
+
+.activmap-place:hover > p > a ,
+.activmap-place.active > p > a {
+    color: #ffea46;
+    text-decoration: underline;
+}
+
+h4.activmap-title {
+    color: #28c7d6;
+}
+.activmap-address::before,
+.activmap-phone::before,
+.activmap-url::before {
+    color: #eee;
+    background: #888;
+}
+.activmap-details a {
+    color: #28c7d6;
+    overflow-wrap: break-word;
+}
+
+.activmap-place p {
+    font-size: 0.75em;
+    font-weight: 300;
+    line-height: 1.25;
+}
+
+.activmap-place p:nth-child(2) {
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 6px;
+}
+
+.activemap-place {
+    color: #dbfcd2;
+}
+
+.activmap-place h3 {
+    font-size: 1em;
+    letter-spacing: 0px;
+    text-shadow: none !important;
+    font-weight: bold;
+    color: #ffea46;
+}
+
+.activmap-place {
+    line-height: 1;
+    text-align: left;
+    color: #ffffff;
+}
+
+.activmap-place > p > a {
+    color: yellow !important;
+}
+
+
+#activmap-wrapper {
+  font-size: 1.1em;
+  font-family: "Roboto", Helvetica, Arial, Sans-serif !important;
+}
+
+.activmap-details {
+  margin-left: 0px !important;
+}
+
+.activmap-infowindow {
+      max-width: 300px !important;
+    text-align: left;
+}
+
+.activmap-address {
+    line-height: 1.5;
+}
+
+.activmap-infowindow > .activmap-details > h4.activmap-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+} 
+
+.gm-style .gm-style-iw-c {
+    padding: 0px;
+}
